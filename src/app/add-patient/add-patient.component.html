@@ -1,0 +1,36 @@
+<div class="container">
+    <div>
+    <h2>Ajouter un Patient :</h2>
+    </div>
+    <form >
+        <div class="col-sm-2 col-md-2 col-lg-2">
+        <label >ID Patient</label>
+        <input type="text" [(ngModel)]="newPatient.idPatientt"
+        name="idPatient" class="form-control">
+        </div>
+        <div class="col-sm-4 col-md-4 col-lg-4" >
+            <label >Nom </label>
+            <input type="text"[(ngModel)]= "newPatient.nom"
+            name="nom" class="form-control">
+            </div>
+            <div class="col-sm-2 col-md-2 col-lg-2">
+                <label >Prenom</label>
+                <input type="text" [(ngModel)]= "newPatient.prenom"
+                name="prenom" class="form-control">
+                </div>
+                <div class="col-sm-4 col-md-4 col-lg-4">
+                    <label >Date Consultation</label>
+                    <input type="date" [(ngModel)]= "newPatient.dateConsultation"
+                    name="dateConsultation" class="form-control">
+                    </div>
+                    <div class="col-sm-2 col-md-2 col-lg-2">
+                        <label >Heure</label>
+                        <input type="text" [(ngModel)]= "newPatient.heure"
+                        name="heure" class="form-control">
+                        </div>
+                    <div class="mt-2">
+                    <button type="submit" (click)="addPatient()" class="btn btn-success">Ajouter</button>
+                    </div>
+                    </form>
+                    </div>
+        

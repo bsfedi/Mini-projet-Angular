@@ -1,0 +1,40 @@
+<!-- <div class="container">
+    <div class="card shadow mb-4">
+    <div class="card-body">
+    <table >
+    <thead>
+    <tr>
+    <th>Liste de Patients</th>
+    </tr>
+    </thead>
+    <tbody *ngFor="let patient of patients">
+    <tr >
+    <td>{{patient}}</td>
+    </tr>
+    </tbody>
+    </table>
+    </div>
+    </div>
+    </div> -->
+    <br>
+    <div class="container">
+        <div class="card shadow mb-4">
+        <div class="card-body">
+        <table class="table table-striped">
+        <tr> <th>Id</th><th>Nom</th> <th>Prenom</th> <th>Date Consultation</th> <th> Heure</th> </tr>
+        <tbody *ngFor="let patient of patients">
+        <tr >
+        <td>{{patient.idPatientt}}</td>
+        <td>{{patient.nom}}</td>
+        <td>{{patient.prenom}}</td>
+        <td>{{patient.dateConsultation | date:'dd/MM/yyyy'}}</td>
+        <td> {{patient.heure}}</td>
+        <td><a class="btn btn-danger" (click)="supprimerPatient(patient)">Supprimer</a></td>
+        <td><a class="btn btn-success" [routerLink]="['/updatePatient',patient.idPatientt]">Modifier</a></td>
+
+    </tr>
+        </tbody>
+        </table>
+        </div>
+        </div>
+        </div>
